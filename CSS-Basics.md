@@ -69,11 +69,12 @@ div {
 1) Margin is applied to the outside of you element hence effecting how far your element is away from other elements.
 2) Padding is applied to the inside of your element hence effecting how far your element's content is away from the border.
 
-Also, using margin will not affect your element's dimensions whereas padding will make your elements dimensions (set height + padding) so for example if you have a 100x100px div with a 5 px padding, your div will actually be 105x105px
+Also, using margin will not affect your element's dimensions whereas padding will make your elements dimensions (set height + padding) so for example if you have a 100x100px div with a 5 px padding, your div will actually be 105x105px.
   ![image](https://user-images.githubusercontent.com/45894327/121137084-f26cf600-c853-11eb-8b0b-368bff25b0bf.png)
 
-  Note: Top/Bottom margins are collapsible: if you have a 20px margin at the bottom of an element and a 30px margin at the top of the next element, the margin between the two elements will be 30px rather than 50px. This does not apply to left/right margin or padding.
-----------------------------------------------------------------------------------------------------------------------------------
+<p>Note- Top/Bottom margins are collapsible: if you have a 20px margin at the bottom of an element and a 30px margin at the top of the next element, the margin between the two elements will be 30px rather than 50px. This does not apply to left/right margin or padding.</p>
+  
+--------------------------------------------------------------------------------------------------------------------------------------------------
 ### Q.What is the purpose of the box-sizing property?
   The box-sizing CSS property sets how the total width and height of an element is calculated.
 
@@ -179,7 +180,7 @@ h2 ~ p {
    margin-bottom: 20px;
 }
 ```
-In this example, all paragraph elements (<p>) will be styled with the specified rules, but only if they are siblings of <h2> elements. There could be other elements in between the <h2> and <p>, and the styles would still apply.
+In this example, all paragraph elements (`<p>`) will be styled with the specified rules, but only if they are siblings of `<h2>` elements. There could be other elements in between the `<h2>` and `<p>`, and the styles would still apply.
 ```html
 <h2>Title</h2>
 <p>Paragraph example.</p>
