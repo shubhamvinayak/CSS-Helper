@@ -422,7 +422,9 @@ For example, it can be used to:
 | 31.  |:visited	          |a:visited	            |Selects all visited links|
 
  ----------------------------------------------------------------------------------------------------------------------------------------------------
-The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. 
+### Float
+  
+  The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. 
 
 **Syntax**  
 ```css
