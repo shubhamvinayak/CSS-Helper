@@ -308,12 +308,13 @@ fixed, element is positioned relative to viewport or the browser window itself. 
 
 static default for every single page element. The only reason you would ever set an element to position: static is to forcefully-remove some positioning that got applied to an element outside of your control.
 
-sticky - Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.
+<p>sticky - Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.</p>
+  
 ![image](https://user-images.githubusercontent.com/45894327/121157241-0110d880-c867-11eb-99cc-21d0aeb1c2f9.png)
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 ### block, inline and inline-block element
 a) Block Elements
-The block elements always start on a new line. They will also take space of an entire row or width. List of block elements are <p>, <h1>, <div>, <header>.
+The block elements always start on a new line. They will also take space of an entire row or width. List of block elements are `<p>, <h1>, <div>, <header>`.
 
 Example:
 ```html
@@ -330,7 +331,7 @@ Example:
 </p>
 ```
 b) Inline Elements
-Inline elements don't start on a new line, they appear on the same line as the content and tags beside them. Some examples of inline elements are <a>, <span> , <strong>, and <img> tags.
+Inline elements don't start on a new line, they appear on the same line as the content and tags beside them. Some examples of inline elements are `<a>, <span> , <strong>, and <img> tags`.
 
 When it comes to margins and padding, browsers treat inline elements differently. You can add space to the left and right on an inline element, but you cannot add height to the top or bottom padding or margin of an inline element.
 
@@ -342,7 +343,7 @@ Example:
 <strong>Strong Player</strong>
 ```
 c) Inline-Block Elements
-Inline-block elements are similar to inline elements, except they can have padding and margins added on all four sides. One common use for using inline-block is for creating navigation links horizontally. Some examples of inline-block elements are <input>, <button>, <select>, <textarea> etc.
+Inline-block elements are similar to inline elements, except they can have padding and margins added on all four sides. One common use for using inline-block is for creating navigation links horizontally. Some examples of inline-block elements are `<input>, <button>, <select>, <textarea>` etc.
 ```html
 input {
   width: 300px;
