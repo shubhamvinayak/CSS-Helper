@@ -597,4 +597,5 @@ hidden:	Content that overflows the element's box is clipped and the rest of the 
 scroll:	The overflowing content is clipped, just like hidden, but provides a scrolling mechanism to access the overflowed content.
   
 auto:	If content overflows the element's box it will automatically provides the scrollbars to see the rest of the content, otherwise scrollbar will not appear.
+  
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
