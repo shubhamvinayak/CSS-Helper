@@ -586,3 +586,15 @@ div { background-color: lightblue; }
 <div class="medium">This is easier to see.</div>
 <div class="heavy">This is very easy to see.</div>
 ```
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+### OverFlow
+There may be a situation when the content of an element might be larger than the dimensions of the box itself. For example given width and height properties did not allow enough room to accommodate the content of the element.
+  
+visible: The default value. Content is not clipped; it will be rendered outside the element's box, and may thus overlap other content.
+  
+hidden:	Content that overflows the element's box is clipped and the rest of the content will be invisible.
+  
+scroll:	The overflowing content is clipped, just like hidden, but provides a scrolling mechanism to access the overflowed content.
+  
+auto:	If content overflows the element's box it will automatically provides the scrollbars to see the rest of the content, otherwise scrollbar will not appear.
+---------------------------------------------------------------------------------------------------------------------------------------------------------
