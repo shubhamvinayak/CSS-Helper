@@ -558,4 +558,31 @@ inherit:	Specifies that the value of the visibility property should be inherited
 visibility: hidden simply hides the element but it will occupy space and affect the layout of the document.
   
 display: none removes the element from the normal layout flow (causes DOM reflow). It will not affect the layout of the document nor occupy space.
+  
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ ### CSS Opacity
+  
+![image](https://user-images.githubusercontent.com/45894327/121169399-96b16580-c871-11eb-9901-c3cc86d8f2a4.png)
+
+  
+The `opacity` CSS property sets the opacity of an element. Opacity is the degree to which content behind an element is hidden, and is the opposite of transparency.
+
+```css
+div { background-color: lightblue; }
+.light {
+  opacity: 30%; /* Barely see the text over the background */
+}
+.medium {
+  opacity: 60%; /* See the text more clearly over the background */
+}
+.heavy {
+  opacity: 100%; /* See the text very clearly over the background */
+}
+```
+
+```html
+<div class="light">You can barely see this.</div>
+<div class="medium">This is easier to see.</div>
+<div class="heavy">This is very easy to see.</div>
+```
