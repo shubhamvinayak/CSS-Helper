@@ -270,5 +270,90 @@ Insert content before, or after, the content of an element
 </body>
 </html>
 ```
-----------------------------------------------------------------------------------------------------------------------------------------------------
+xii)contextual selector:Contextual selector addresses specific occurrence of an element. It is a string of individual selectors separated by white space (search pattern), where only the last element in the pattern is addressed providing it matches the specified contex.
+It also check the context of the class in the html tree, assigning the style to the element through a specific route, taking into account the order of depth in the tree.
+Example:
 
+table p { property: value; } 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+### Q.What is the difference between class selectors and id selectors
+In the CSS, a class selector is a name preceded by a full stop (“.”) and an ID selector is a name preceded by a hash character (“#”). The difference between an ID and a class is that an ID can be used to identify one element, whereas a class can be used to identify more than one.
+```html
+#top {
+    background-color: #ccc;
+    padding: 20px
+}
+
+.intro {
+    color: red;
+    font-weight: bold;
+}
+```
+```html
+<div id="top">
+
+<h1>Chocolate curry</h1>
+<p class="intro">This is my recipe for making curry purely with chocolate</p>
+<p class="intro">Mmm mm mmmmm</p>
+
+</div>
+```
+------------------------------------------------------------------------------------------------------------------------------------------------
+### CSS position Property
+absolute, place an element exactly where you want to place it. absolute position is actually set relative to the element's parent. if no parent available then relatively place to the page itself (it will default all the way back up to the element).
+
+relative, means "relative to itself". Setting position: relative; on an element and no other positioning attributes, it will no effect on it's positioning. It allows the use of z-index on the element and it limits the scope of absolutely positioned child elements. Any child element will be absolutely positioned within that block.
+
+fixed, element is positioned relative to viewport or the browser window itself. viewport doesn't changed if you scroll and hence fixed element will stay right in the same position.
+
+static default for every single page element. The only reason you would ever set an element to position: static is to forcefully-remove some positioning that got applied to an element outside of your control.
+
+sticky - Sticky positioning is a hybrid of relative and fixed positioning. The element is treated as relative positioned until it crosses a specified threshold, at which point it is treated as fixed positioned.
+![image](https://user-images.githubusercontent.com/45894327/121157241-0110d880-c867-11eb-99cc-21d0aeb1c2f9.png)
+----------------------------------------------------------------------------------------------------------------------------------------------------
+### block, inline and inline-block element
+a) Block Elements
+The block elements always start on a new line. They will also take space of an entire row or width. List of block elements are <p>, <h1>, <div>, <header>.
+
+Example:
+```html
+ <p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde autem,
+  consequatur deleniti nobis beatae quo dolore nemo corporis. Ad delectus
+  dignissimos pariatur illum eveniet dolor rem eius laborum sed iure!
+</p>
+
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde autem,
+  consequatur deleniti nobis beatae quo dolore nemo corporis. Ad delectus
+  dignissimos pariatur illum eveniet dolor rem eius laborum sed iure!
+</p>
+```
+b) Inline Elements
+Inline elements don't start on a new line, they appear on the same line as the content and tags beside them. Some examples of inline elements are <a>, <span> , <strong>, and <img> tags.
+
+When it comes to margins and padding, browsers treat inline elements differently. You can add space to the left and right on an inline element, but you cannot add height to the top or bottom padding or margin of an inline element.
+
+Example:
+```html
+<a href="#">Link</a>
+<img src="https://picsum.photos/30" />
+<span>Span</span>
+<strong>Strong Player</strong>
+```
+c) Inline-Block Elements
+Inline-block elements are similar to inline elements, except they can have padding and margins added on all four sides. One common use for using inline-block is for creating navigation links horizontally. Some examples of inline-block elements are <input>, <button>, <select>, <textarea> etc.
+```html
+input {
+  width: 300px;
+  height: 50px;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+<input type="text" /> <button>Submit</button>
+```
