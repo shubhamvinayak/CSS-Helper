@@ -424,7 +424,7 @@ For example, it can be used to:
  ----------------------------------------------------------------------------------------------------------------------------------------------------
 ### Float
   
-  The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. 
+  The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. are not  absolutely positioned. which means that an element can only be floated left or right, not up or down.
 
 **Syntax**  
 ```css
@@ -486,3 +486,76 @@ div {
      vel in massa. Phasellus feugiat est vel leo finibus congue.</p>
 </section>
 ```
+....
+Clear property:
+Elements that comes after the floating element will flow around it. The clear property specifies which sides of an element's box other floating elements are not allowed.
+
+|Sl.No| Properties     | Description  |
+|-----|----------------|--------------|
+| 01. |clear: none     |Allows floating elements on both sides. This is default|
+| 02. |clear: left     |No floating elements allowed on the left side|
+| 03. |clear: right    |No floating elements allowed on the right side|
+| 04. |clear: both     |No floating elements allowed on either the left or the right side|
+| 05. |clear: inherit  |The element inherits the clear value of its parent|
+
+Example
+```css
+div {
+  clear: left;
+}
+```
+------------------------------------------------------------------------------------------------------------------------------------------------------
+### Display Property
+
+The display property specifies the display behavior (the type of rendering box) of an element.  
+Example:
+```css
+p.ex1 {display: none;}
+p.ex2 {display: inline;}
+p.ex3 {display: block;}
+p.ex4 {display: inline-block;}
+```
+
+**Property Values**  
+
+|Sl.No|Value	   |Description	
+|-----|---------------|------------------
+| 01. |inline	|Displays an element as an inline element (like `<span>`). Any height and width properties will have no effect|	
+| 02. |block	|Displays an element as a block element (like `<p>`). It starts on a new line, and takes up the whole width	|
+| 03. |contents|Makes the container disappear, making the child elements children of the element the next level up in the DOM	|
+| 04. |flex	          |Displays an element as a block-level flex container	|
+| 05. |grid	          |Displays an element as a block-level grid container	|
+| 06. |inline-block   |Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values|	
+| 07. |inline-flex	   |Displays an element as an inline-level flex container	|
+| 08. |inline-grid	   |Displays an element as an inline-level grid container	|
+| 09. |inline-table    |The element is displayed as an inline-level table	|
+| 10. |list-item	     |Let the element behave like a `<li>` element	|
+| 11. |run-in	         |Displays an element as either block or inline, depending on context	|
+| 12. |table	         |Let the element behave like a `<table>` element	|
+| 13. |table-caption	 |Let the element behave like a `<caption>` element	|
+| 14. |table-column-group	|Let the element behave like a `<colgroup>` element	|
+| 15. |table-header-group	|Let the element behave like a `<thead>` element	|
+| 16. |table-footer-group	|Let the element behave like a `<tfoot>` element	|
+| 17. |table-row-group	  |Let the element behave like a `<tbody>` element	|
+| 18. |table-cell	        |Let the element behave like a `<td>` element	|
+| 19. |table-column	      |Let the element behave like a `<col>` element	|
+| 20. |table-row	        |Let the element behave like a `<tr>` element	|
+| 21. |none	              |The element is completely removed	|
+| 22. |initial	          |Sets this property to its default value. Read about initial	|
+| 23. |inherit	          |Inherits this property from its parent element. Read about inherit|
+---------------------------------------------------------------------------------------------------------------------------------------------
+### Visibilty of Element
+You can use the visibility property to control whether an element is visible or not. This property can take one of the following values listed in the table below:
+  
+visible:	Default value. The box and its contents are visible.
+  
+hidden:	The box and its content are invisible, but still affect the layout of the page.
+  
+collapse:	This value causes the entire row or column to be removed from the display. This value is used for row, row group, column, and column group elements.
+  
+inherit:	Specifies that the value of the visibility property should be inherited from the parent element i.e. takes the same visibility value as specified for its parent.
+  
+visibility: hidden simply hides the element but it will occupy space and affect the layout of the document.
+  
+display: none removes the element from the normal layout flow (causes DOM reflow). It will not affect the layout of the document nor occupy space.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
