@@ -64,4 +64,210 @@ div {
     margin: 0 auto;
 }
 ```
+-----------------------------------------------------------------------------------------------------------------------------
+###  Q. What is the difference between padding and margin
+1) Margin is applied to the outside of you element hence effecting how far your element is away from other elements.
+2) Padding is applied to the inside of your element hence effecting how far your element's content is away from the border.
+
+Also, using margin will not affect your element's dimensions whereas padding will make your elements dimensions (set height + padding) so for example if you have a 100x100px div with a 5 px padding, your div will actually be 105x105px
+  ![image](https://user-images.githubusercontent.com/45894327/121137084-f26cf600-c853-11eb-8b0b-368bff25b0bf.png)
+
+  Note: Top/Bottom margins are collapsible: if you have a 20px margin at the bottom of an element and a 30px margin at the top of the next element, the margin between the two elements will be 30px rather than 50px. This does not apply to left/right margin or padding.
+----------------------------------------------------------------------------------------------------------------------------------
+### Q.What is the purpose of the box-sizing property?
+  The box-sizing CSS property sets how the total width and height of an element is calculated.
+
+content-box: the default width and height values apply to the element's content only. The padding and border are added to the outside of the box.
+padding-box: Width and height values apply to the element's content and its padding. The border is added to the outside of the box. Currently, only Firefox supports the padding-box value.
+border-box: Width and height values apply to the content, padding, and border.
+inherit: inherits the box sizing of the parent element.
+```html
+box-sizing: content-box;
+width: 100%;
+border: solid rgb(90,107,204) 10px;
+padding: 5px;
+```
+  ---------------------------------------------------------------------------------------------------------------------
+### Basics- CSS selector
+![image](https://user-images.githubusercontent.com/45894327/121138058-f2b9c100-c854-11eb-9bcf-8604144367d6.png)
+A CSS selector is the part of a CSS rule set that actually selects the content you want to style.
+i) Universal Selector: The universal selector works like a wild card character, selecting all elements on a page. Every HTML page is built on content placed within HTML tags. Each set of tags represents an element on the page.
+ ```html
+ * {
+   color: green;
+   font-size: 20px;
+   line-height: 25px;
+}
+```
+ii) Element Type Selector: This selector match one or more HTML elements of the same name.
+```html
+ul {
+   list-style: none;
+   border: solid 1px #ccc;
+}
+<ul>
+  <li>Fish</li>
+  <li>Apples</li>
+  <li>Cheese</li>
+</ul>
+
+<div class="example">
+  <p>Example paragraph text.</p>
+</div>
+
+<ul>
+  <li>Water</li>
+  <li>Juice</li>
+  <li>Maple Syrup</li>
+</ul>
+
+```
+iii) ID Selector: This selector matches any HTML element that has an ID attribute with the same value as that of the selector.
+```html
+#container {
+   width: 960px;
+   margin: 0 auto;
+}
+<div id="container"></div>
+```
+iv) Class Selector: The class selector also matches all elements on the page that have their class attribute set to the same value as the class.
+```html
+.box {
+   padding: 20px;
+   margin: 10px;
+   width: 240px;
+}
+<div class="box"></div>
+```
+v) Descendant Combinator: The descendant selector or, more accurately, the descendant combinator lets you combine two or more selectors so you can be more specific in your selection method.
+```html
+#container .box {
+   float: left;
+   padding-bottom: 15px;
+}
+```
+This declaration block will apply to all elements that have a class of box that are inside an element with an ID of container. It’s worth noting that the .box element doesn’t have to be an immediate child: there could be another element wrapping .box, and the styles would still apply.
+```html
+<div id="container">
+  <div class="box"></div>
+
+  <div class="box-2"></div>
+</div>
+
+<div class="box"></div>
+```
+vi) Child Combinator: A selector that uses the child combinator is similar to a selector that uses a descendant combinator, except it only targets immediate child elements.
+```html
+#container > .box {
+   float: left;
+   padding-bottom: 15px;
+}
+```
+The selector will match all elements that have a class of box and that are immediate children of the #container element. That means, unlike the descendant combinator, there can’t be another element wrapping .box—it has to be a direct child element.
+```html
+<div id="container">
+  <div class="box"></div>
+
+  <div>
+    <div class="box"></div>
+  </div>
+</div>
+```
+vii) General Sibling Combinator: A selector that uses a general sibling combinator matches elements based on sibling relationships. The selected elements are beside each other in the HTML.
+```html
+h2 ~ p {
+   margin-bottom: 20px;
+}
+```
+In this example, all paragraph elements (<p>) will be styled with the specified rules, but only if they are siblings of <h2> elements. There could be other elements in between the <h2> and <p>, and the styles would still apply.
+```html
+<h2>Title</h2>
+<p>Paragraph example.</p>
+<p>Paragraph example.</p>
+<p>Paragraph example.</p>
+<div class="box">
+  <p>Paragraph example.</p>
+</div>
+```
+viii) Adjacent Sibling Combinator: A selector that uses the adjacent sibling combinator uses the plus symbol (+), and is almost the same as the general sibling selector. The difference is that the targeted element must be an immediate sibling, not just a general sibling.
+```html
+p + p {
+   text-indent: 1.5em;
+   margin-bottom: 0;
+}
+```
+In this example will apply the specified styles only to paragraph elements that immediately follow other paragraph elements. This means the first paragraph element on a page would not receive these styles. Also, if another element appeared between two paragraphs, the second paragraph of the two wouldn’t have the styles applied.
+```html
+<h2>Title</h2>
+<p>Paragraph example.</p>
+<p>Paragraph example.</p>
+<p>Paragraph example.</p>
+
+<div class="box">
+  <p>Paragraph example.</p>
+  <p>Paragraph example.</p>
+</div>
+```
+ix) Attribute Selector: The attribute selector targets elements based on the presence and/or value of HTML attributes, and is declared using square brackets
+ ```html
+input[type="text"] {
+   background-color: #444;
+   width: 200px;
+}
+<input type="text">
+```
+The attribute selector can also be declared using just the attribute itself, with no value, like this:
+```html
+input[type] {
+   background-color: #444;
+   width: 200px;
+}
+```
+x) Pseudo-class: A pseudo-class uses a colon character to identify a pseudo-state that an element might be in—for example, the state of being hovered, or the state of being activated.
+```html
+a:hover {
+   color: red;
+}
+```
+xi) Pseudo-element: A CSS pseudo-element is used to style specified parts of an element. For example, it can be used to:
+Style the first letter, or line, of an element
+Insert content before, or after, the content of an element
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p::first-line {
+        color: #ff0000;
+        font-variant: small-caps;
+      }
+
+      p::first-letter {
+        color: #ff0000;
+        font-size: xx-large;
+      }
+
+      h1::before {
+        content: url(smiley.gif);
+      }
+
+      h1::after {
+        content: url(smiley.gif);
+      }
+
+      ::selection {
+        color: red;
+        background: yellow;
+      }
+    </style>
+  </head>
+<body>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s,
+  <h1>when an unknown printer took a galley of type and scrambled it to make a
+  type specimen book.<h1></p>
+</body>
+</html>
+```
+----------------------------------------------------------------------------------------------------------------------------------------------------
 
