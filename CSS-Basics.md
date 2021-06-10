@@ -616,3 +616,45 @@ auto:	If content overflows the element's box it will automatically provides the 
   
  ### Grid:
  https://learncssgrid.com/#naming-grid-lines
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+### Counter
+CSS counters are "variables" maintained by CSS whose values can be incremented by CSS rules (to track how many times they are used). Counters let you adjust the appearance of content based on its placement in the document.
+
+* Automatic Numbering With Counters :
+CSS counters are like "variables". The variable values can be incremented by CSS rules (which will track how many times they are used).
+
+To work with CSS counters we will use the following properties:
+
+`counter-reset` - Creates or resets a counter
+`counter-increment` - Increments a counter value
+`content` - Inserts generated content
+`counter()` or `counters()` function - Adds the value of a counter to an element
+To use a CSS counter, it must first be created with counter-reset.
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  counter-reset: section;
+}
+
+h2::before {
+  counter-increment: section;
+  content: "Section " counter(section) ": ";
+}
+</style>
+</head>
+<body>
+
+<h1>Using CSS Counters:</h1>
+<h2>HTML Tutorial</h2>
+<h2>CSS Tutorial</h2>
+<h2>JavaScript Tutorial</h2>
+
+</body>
+</html>
+```
