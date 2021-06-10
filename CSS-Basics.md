@@ -602,7 +602,9 @@ auto:	If content overflows the element's box it will automatically provides the 
   
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
   
-### Z-Index: The z-index CSS property specifies the layering or stacking order for the positioned elements i.e. elements whose position value is one of absolute, fixed, or relative. The stacking order refers to the position of elements along the Z-axis which is perpendicular to the screen.
+### Z-Index:
+  
+ The z-index CSS property specifies the layering or stacking order for the positioned elements i.e. elements whose position value is one of absolute, fixed, or relative. The stacking order refers to the position of elements along the Z-axis which is perpendicular to the screen.
  `z-index: integer | auto | initial | inherit`
   
   `integer`	Sets the stack level of the element's box in the current stacking context. The box also establishes a local stacking context in which its stack level is 0 (zero). Negative integer values are allowed.
