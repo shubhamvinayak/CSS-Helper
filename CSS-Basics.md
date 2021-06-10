@@ -601,3 +601,16 @@ scroll:	The overflowing content is clipped, just like hidden, but provides a scr
 auto:	If content overflows the element's box it will automatically provides the scrollbars to see the rest of the content, otherwise scrollbar will not appear.
   
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+### Z-Index: The z-index CSS property specifies the layering or stacking order for the positioned elements i.e. elements whose position value is one of absolute, fixed, or relative. The stacking order refers to the position of elements along the Z-axis which is perpendicular to the screen.
+ `z-index: integer | auto | initial | inherit`
+  
+  `integer`	Sets the stack level of the element's box in the current stacking context. The box also establishes a local stacking context in which its stack level is 0 (zero). Negative integer values are allowed.
+`auto`	The stack level of the element's box is the same as its parent's box, and doesn't establish a new stacking context. This is default value.
+`initial`	Sets this property to its default value.
+`inherit`	If specified, the associated element takes the computed value of its parent element z-index property.
+  
+ ----------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  
+
